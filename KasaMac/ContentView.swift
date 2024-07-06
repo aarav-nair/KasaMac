@@ -8,12 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var text: String = "31"
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Button {
+                text = String("\(discoverPlugs())")
+            } label: {
+                Text("Label")
+            }
+            Text(text)
+//            Image(systemName: "globe")
+//                .imageScale(.large)
+//                .foregroundStyle(.tint)
+//            Text("Hello, world!")
+            Text(String("\(discoverPlugs())"))
         }
         .padding()
     }

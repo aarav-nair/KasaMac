@@ -1,11 +1,21 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11134" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
-    <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11134"/>
-    </dependencies>
-    <objects>
-        <customObject id="-2" userLabel="File's Owner"/>
-        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
-        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-    </objects>
-</document>
+import subprocess
+
+
+def currPercent() -> int:
+   cmd = 'pmset -g batt | grep -Eo "\d+%" | cut -d% -f1'
+   ps = subprocess.Popen(
+      cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+   output = ps.communicate()[0]
+   str_output = str(output, encoding='utf-8')
+   percent = int(str_output)
+   print(percent)
+   return percent
+
+
+def currCharging() -> bool:
+   cmd = 'pmset -g batt | head -n 1 | cut -c19- | rev | cut -c 2- | rev'
+   ps = subprocess.Popen(
+      cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+   output = ps.communicate()[0]
+   curr_state = str(output, encoding='utf-8')
+   return curr_state == "AC Power\n"
