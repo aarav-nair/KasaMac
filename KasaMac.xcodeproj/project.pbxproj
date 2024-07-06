@@ -11,6 +11,8 @@
 		5EE7E4172C39D95600FC542B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE7E4162C39D95600FC542B /* ContentView.swift */; };
 		5EE7E4192C39D95700FC542B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EE7E4182C39D95700FC542B /* Assets.xcassets */; };
 		5EE7E41C2C39D95700FC542B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EE7E41B2C39D95700FC542B /* Preview Assets.xcassets */; };
+		5EE7E4252C39D9C700FC542B /* plug.py in Resources */ = {isa = PBXBuildFile; fileRef = 5EE7E4242C39D9C700FC542B /* plug.py */; };
+		5EE7E4272C39D9D200FC542B /* power.py in Resources */ = {isa = PBXBuildFile; fileRef = 5EE7E4262C39D9D200FC542B /* power.py */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		5EE7E4182C39D95700FC542B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5EE7E41B2C39D95700FC542B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5EE7E41D2C39D95700FC542B /* KasaMac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KasaMac.entitlements; sourceTree = "<group>"; };
+		5EE7E4242C39D9C700FC542B /* plug.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = plug.py; sourceTree = "<group>"; };
+		5EE7E4262C39D9D200FC542B /* power.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = power.py; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,9 @@
 		5EE7E4132C39D95600FC542B /* KasaMac */ = {
 			isa = PBXGroup;
 			children = (
+				5EE7E4242C39D9C700FC542B /* plug.py */,
+				5EE7E4262C39D9D200FC542B /* power.py */,
+				5EE7E4232C39D9AA00FC542B /* Python Files */,
 				5EE7E4142C39D95600FC542B /* KasaMacApp.swift */,
 				5EE7E4162C39D95600FC542B /* ContentView.swift */,
 				5EE7E4182C39D95700FC542B /* Assets.xcassets */,
@@ -67,6 +74,13 @@
 				5EE7E41B2C39D95700FC542B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5EE7E4232C39D9AA00FC542B /* Python Files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Python Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +141,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EE7E4272C39D9D200FC542B /* power.py in Resources */,
+				5EE7E4252C39D9C700FC542B /* plug.py in Resources */,
 				5EE7E41C2C39D95700FC542B /* Preview Assets.xcassets in Resources */,
 				5EE7E4192C39D95700FC542B /* Assets.xcassets in Resources */,
 			);
