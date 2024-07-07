@@ -6,12 +6,24 @@ from kasa import SmartPlug
 from kasa import Discover, Credentials
 
 
+
+async def all_plugs():
+   return await Discover.discover()
+   
+
 def findPlugs():
    all = asyncio.run(all_plugs())
    keys = list(all.keys())
    devices = list(all.values())
-   return all
-
+   names = list(map(lambda dev: dev.alias, devices))
+   return names
+   
+   
+def getPlugNames():
+    plugs = findPlugs()
+    keys = list(all.keys())
+    devices = list(all.values())
+    
 
 def auto(address: str, lower: int, upper: int):
    plug = SmartPlug(str)
@@ -23,10 +35,6 @@ def auto(address: str, lower: int, upper: int):
 
    elif not isCharge and percent <= lower:
       asyncio.run(plug.turn_on())
-
-
-async def all_plugs():
-   return await Discover.discover()
    
 
 if __name__ == "__main__":
