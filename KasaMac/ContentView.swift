@@ -9,21 +9,24 @@ import SwiftUI
 
 struct ContentView: View {
     @State var text: String = "31"
+    @State var plugs: [String] = []
+    @State var discovered: Bool = false
     var body: some View {
         VStack {
-            Button {
-                text = String("\(discoverPlugs())")
-            } label: {
-                Text("Label")
+            if (!discovered) {
+                Button {
+                    text = String("\(discoverPlugs())")
+                    discovered = true
+                } label: {
+                    Text("Discover Plugs")
+                }
             }
-            Text(text)
-//            Image(systemName: "globe")
-//                .imageScale(.large)
-//                .foregroundStyle(.tint)
-//            Text("Hello, world!")
-            Text(String("\(discoverPlugs())"))
+                
+            else {
+                PlugRowView(name: text)
+            }
         }
-        .padding()
+            .padding()
     }
 }
 
