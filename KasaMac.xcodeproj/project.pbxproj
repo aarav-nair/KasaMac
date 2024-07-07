@@ -13,6 +13,9 @@
 		5EE7E41C2C39D95700FC542B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EE7E41B2C39D95700FC542B /* Preview Assets.xcassets */; };
 		5EE7E4252C39D9C700FC542B /* plug.py in Resources */ = {isa = PBXBuildFile; fileRef = 5EE7E4242C39D9C700FC542B /* plug.py */; };
 		5EE7E4272C39D9D200FC542B /* power.py in Resources */ = {isa = PBXBuildFile; fileRef = 5EE7E4262C39D9D200FC542B /* power.py */; };
+		5EE7E4292C39DBFF00FC542B /* PythonRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE7E4282C39DBFF00FC542B /* PythonRunner.swift */; };
+		5EE7E42C2C39DC3300FC542B /* PythonKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5EE7E42B2C39DC3300FC542B /* PythonKit */; };
+		5EE7E42E2C39F1F600FC542B /* PlugRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE7E42D2C39F1F600FC542B /* PlugRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,8 @@
 		5EE7E41D2C39D95700FC542B /* KasaMac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KasaMac.entitlements; sourceTree = "<group>"; };
 		5EE7E4242C39D9C700FC542B /* plug.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = plug.py; sourceTree = "<group>"; };
 		5EE7E4262C39D9D200FC542B /* power.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = power.py; sourceTree = "<group>"; };
+		5EE7E4282C39DBFF00FC542B /* PythonRunner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PythonRunner.swift; sourceTree = "<group>"; };
+		5EE7E42D2C39F1F600FC542B /* PlugRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlugRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EE7E42C2C39DC3300FC542B /* PythonKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +70,8 @@
 				5EE7E4182C39D95700FC542B /* Assets.xcassets */,
 				5EE7E41D2C39D95700FC542B /* KasaMac.entitlements */,
 				5EE7E41A2C39D95700FC542B /* Preview Content */,
+				5EE7E4282C39DBFF00FC542B /* PythonRunner.swift */,
+				5EE7E42D2C39F1F600FC542B /* PlugRowView.swift */,
 			);
 			path = KasaMac;
 			sourceTree = "<group>";
@@ -99,6 +107,9 @@
 			dependencies = (
 			);
 			name = KasaMac;
+			packageProductDependencies = (
+				5EE7E42B2C39DC3300FC542B /* PythonKit */,
+			);
 			productName = KasaMac;
 			productReference = 5EE7E4112C39D95600FC542B /* KasaMac.app */;
 			productType = "com.apple.product-type.application";
@@ -127,6 +138,9 @@
 				Base,
 			);
 			mainGroup = 5EE7E4082C39D95600FC542B;
+			packageReferences = (
+				5EE7E42A2C39DC3300FC542B /* XCRemoteSwiftPackageReference "PythonKit" */,
+			);
 			productRefGroup = 5EE7E4122C39D95600FC542B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -155,8 +169,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EE7E4292C39DBFF00FC542B /* PythonRunner.swift in Sources */,
 				5EE7E4172C39D95600FC542B /* ContentView.swift in Sources */,
 				5EE7E4152C39D95600FC542B /* KasaMacApp.swift in Sources */,
+				5EE7E42E2C39F1F600FC542B /* PlugRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,7 +308,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"KasaMac/Preview Content\"";
 				DEVELOPMENT_TEAM = P4N95549U3;
-				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -319,7 +335,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"KasaMac/Preview Content\"";
 				DEVELOPMENT_TEAM = P4N95549U3;
-				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -357,6 +373,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5EE7E42A2C39DC3300FC542B /* XCRemoteSwiftPackageReference "PythonKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pvieito/PythonKit";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5EE7E42B2C39DC3300FC542B /* PythonKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5EE7E42A2C39DC3300FC542B /* XCRemoteSwiftPackageReference "PythonKit" */;
+			productName = PythonKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5EE7E4092C39D95600FC542B /* Project object */;
 }
