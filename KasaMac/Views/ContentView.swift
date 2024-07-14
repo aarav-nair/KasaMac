@@ -8,22 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var text: String = "31"
-    @State var plugs: [String] = []
-    @State var discovered: Bool = false
+    @ObservedObject var viewModel = KasaViewModel()
+    
     var body: some View {
         VStack {
-            if (!discovered) {
+            if (!viewModel.discovered) {
                 Button {
-                    text = String("\(discoverPlugs())")
-                    discovered = true
+                    viewModel.discoverPlugs()
                 } label: {
                     Text("Discover Plugs")
                 }
             }
                 
             else {
-                PlugRowView(name: text)
+                ForEach(viewModel.plugs.sorted(by: >), id: \.key) { key, value in
+                    PlugRowView(viewModel: viewModel)
+                            }
             }
         }
             .padding()
