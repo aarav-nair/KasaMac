@@ -13,10 +13,11 @@ async def all_plugs():
 
 def findPlugs():
    all = asyncio.run(all_plugs())
-   keys = list(all.keys())
+   addresses = list(all.keys())
    devices = list(all.values())
    names = list(map(lambda dev: dev.alias, devices))
-   return names
+   dict = dict(zip(names, addresses))
+   return dict
    
    
 def getPlugNames():
