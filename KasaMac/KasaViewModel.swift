@@ -11,33 +11,24 @@ import SwiftUI
 
 class KasaViewModel: ObservableObject {
     @Published var discovered: Bool = false
-    @Published var plugs: [String: String] = [:]
+    @Published var plugs: [PlugItem] = []
     
-    func discoverPlugs() -> [String: String] {
+    func discoverPlugs() {
         let file = getFile(name: "plug")
         let response = file.findPlugs()
         
-    //    var swiftDict = [String: String]()
-    //    for (key, value) in response {
-    //        if let key = String(key), let value = String(value) {
-    //            swiftDict[key] = value
-    //        }
-    //    }
-    //    return swiftDict
-        let keys = response.keys
-        var swiftDict: [String: String] = [:]
-        response.forEach { py in
+        let names = response[0]
+        let addresses = response[1]
+        let isOn = response[2]
+        let len = names.count
+        var result: [PlugItem] = []
+
+        (0..<len).forEach { i in
+            let bool = Bool("\(isOn[i])".lowercased())
+            let plug = PlugItem(name: "\(names[i])", address: "\(addresses[i])", isOn: bool ?? false)
+            result.append(plug)
         }
-        
-        ForEach(response, id: \.key) { key, value in
-            Text("**\(key)**: \(value)")
-        }
-        
-        for key in response.keys {
-            swiftDict[key] = response[key]
-        }
-        
-        return swiftDict
+        self.plugs = result
     }
 }
 
