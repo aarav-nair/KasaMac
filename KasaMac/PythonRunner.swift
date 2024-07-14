@@ -11,8 +11,7 @@ import PythonKit
 func getFile(name: String) -> PythonObject {
     let sys = Python.import("sys")
     sys.path.append("/Users/aaravnair/Documents/GitHub/KasaMac/KasaMac")
-    print("Python \(sys.version_info.major).\(sys.version_info.minor)")
-    print("Python Version: \(sys.version)")
+    sys.path.append("/Users/aaravnair/Documents/GitHub/KasaMac/KasaMac/proj_venv/lib/python3.12/site-packages")
     print(sys.path)
 
     let file = Python.import(name)
@@ -32,11 +31,16 @@ func isCharging() -> PythonObject {
 }
 
 func discoverPlugs() -> PythonObject {
-//    PythonLibrary.useVersion(3, 8)
-    let sys = Python.import("sys")
-    sys.path.append("/Users/aaravnair/Documents/GitHub/KasaMac/KasaMac")
-    sys.path.append("/Users/aaravnair/Documents/GitHub/KasaMac/KasaMac/proj_venv/lib/python3.12/site-packages")
-    let file = Python.import("plug")
+    let file = getFile(name: "plug")
     let response = file.findPlugs()
+    
+//    var swiftDict = [String: String]()
+//    for (key, value) in response {
+//        if let key = String(key), let value = String(value) {
+//            swiftDict[key] = value
+//        }
+//    }
+//    return swiftDict
+    
     return response
 }
