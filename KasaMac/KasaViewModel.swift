@@ -40,3 +40,9 @@ class KasaViewModel: ObservableObject {
         return swiftDict
     }
 }
+
+struct PlugItem {
+    var name: String
+    var address: String
+    var isOn: Bool
+}
