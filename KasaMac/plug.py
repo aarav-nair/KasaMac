@@ -21,6 +21,16 @@ def findPlugs():
     return [names, addresses, isOn]
 
 
+def turn_on(address: str):
+    plug = Device.connect(str)
+    asyncio.run(plug.turn_off())
+
+
+def turn_off(address: str):
+    plug = Device.connect(str)
+    asyncio.run(plug.turn_off())
+    
+
 def auto(address: str, lower: int, upper: int):
     plug = SmartPlug(str)
     percent = currPercent()
