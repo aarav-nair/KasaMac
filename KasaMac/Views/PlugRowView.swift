@@ -7,28 +7,33 @@
 
 import Foundation
 import SwiftUI
-private struct NamedFont: Identifiable {
-    let name: String
-    let font: Font
-    var id: String { name }
-}
 
 struct PlugRowView: View {
     @ObservedObject var viewModel: KasaViewModel
 
     var body: some View {
-        @State var plugs = viewModel.plugs
-        let last = plugs.count - 1
         ScrollView {
-            ForEach($plugs, id: \.self) { $plug in
+            ForEach($viewModel.plugs, id: \.self) { $plug in
                 HStack {
                     Toggle(isOn: $plug.isOn, label: {
                         Text(plug.name)
                     })
+                    
+                    if plug.isOn {
+                        turnOn(address: plug.address)
+                    }
+                    else {
+                        turnOff(address: plug.address)
+                    }
                 }
-                if plugs[last] != plug {
-                    Divider()
-                }
+//                .onChange(of: $plug.isOn) { oldValue, newValue in
+//                    if $plug.isOn {
+//                        turnOn(address: plug.address)
+//                    }
+//                    else {
+//                        turnOff(address: plug.address)
+//                    }
+//                }
             }
         }
     }
