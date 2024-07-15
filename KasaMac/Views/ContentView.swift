@@ -23,6 +23,8 @@ struct ContentView: View {
                 
             else {
                 PlugRowView(viewModel: viewModel)
+                Divider()
+                BatteryView(viewModel: viewModel)
             }
         }
             .padding()
