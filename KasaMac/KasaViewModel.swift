@@ -12,6 +12,11 @@ import SwiftUI
 class KasaViewModel: ObservableObject {
     @Published var discovered: Bool = false
     @Published var plugs: [PlugItem] = []
+    @Published var currPlug: PlugItem?
+    @Published var minimum: Int = 20
+    @Published var maximum: Int = 80
+    @Published var target: Int = 80
+    @Published var time: Date = Date.now
     
     func discoverPlugs() {
         let file = getFile(name: "plug")
