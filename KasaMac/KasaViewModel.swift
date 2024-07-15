@@ -32,7 +32,7 @@ class KasaViewModel: ObservableObject {
     }
 }
 
-struct PlugItem {
+struct PlugItem: Hashable {
     var name: String
     var address: String
     var isOn: Bool
