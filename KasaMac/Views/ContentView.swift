@@ -15,15 +15,14 @@ struct ContentView: View {
             if (!viewModel.discovered) {
                 Button {
                     viewModel.discoverPlugs()
+                    viewModel.discovered = true
                 } label: {
                     Text("Discover Plugs")
                 }
             }
                 
             else {
-                ForEach(viewModel.plugs.sorted(by: >), id: \.key) { key, value in
-                    PlugRowView(viewModel: viewModel)
-                            }
+                PlugRowView(viewModel: viewModel)
             }
         }
             .padding()
