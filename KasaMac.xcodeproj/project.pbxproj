@@ -17,6 +17,7 @@
 		5EE7E42C2C39DC3300FC542B /* PythonKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5EE7E42B2C39DC3300FC542B /* PythonKit */; };
 		5EE7E42E2C39F1F600FC542B /* PlugRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE7E42D2C39F1F600FC542B /* PlugRowView.swift */; };
 		5EE7E4302C4388D700FC542B /* KasaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE7E42F2C4388D700FC542B /* KasaViewModel.swift */; };
+		5EE7E4332C44B52700FC542B /* BatteryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE7E4322C44B52700FC542B /* BatteryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		5EE7E4282C39DBFF00FC542B /* PythonRunner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PythonRunner.swift; sourceTree = "<group>"; };
 		5EE7E42D2C39F1F600FC542B /* PlugRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlugRowView.swift; sourceTree = "<group>"; };
 		5EE7E42F2C4388D700FC542B /* KasaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KasaViewModel.swift; sourceTree = "<group>"; };
+		5EE7E4322C44B52700FC542B /* BatteryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			children = (
 				5EE7E42D2C39F1F600FC542B /* PlugRowView.swift */,
 				5EE7E4162C39D95600FC542B /* ContentView.swift */,
+				5EE7E4322C44B52700FC542B /* BatteryView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EE7E4332C44B52700FC542B /* BatteryView.swift in Sources */,
 				5EE7E4292C39DBFF00FC542B /* PythonRunner.swift in Sources */,
 				5EE7E4172C39D95600FC542B /* ContentView.swift in Sources */,
 				5EE7E4302C4388D700FC542B /* KasaViewModel.swift in Sources */,
