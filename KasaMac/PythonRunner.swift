@@ -33,14 +33,22 @@ func isCharging() -> PythonObject {
 func discoverPlugs() -> PythonObject {
     let file = getFile(name: "plug")
     let response = file.findPlugs()
-    
-//    var swiftDict = [String: String]()
-//    for (key, value) in response {
-//        if let key = String(key), let value = String(value) {
-//            swiftDict[key] = value
-//        }
-//    }
-//    return swiftDict
-    
     return response
 }
+
+func turnOn(address: String) {
+    let file = getFile(name: "plug")
+    file.turn_on(address)
+}
+
+func turnOff(address: String) {
+    let file = getFile(name: "plug")
+    file.turn_off(address)
+}
+
+func optimizer(address: String, lower: Int, upper: Int) {
+    let file = getFile(name: "plug")
+    file.auto(address, lower, upper)
+}
+
+
