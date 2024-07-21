@@ -15,25 +15,19 @@ struct PlugRowView: View {
         ScrollView {
             ForEach($viewModel.plugs, id: \.self) { $plug in
                 HStack {
+                    Image(systemName: "powerplug")
                     Toggle(isOn: $plug.isOn, label: {
                         Text(plug.name)
                     })
-                    
-                    if plug.isOn {
-                        turnOn(address: plug.address)
-                    }
-                    else {
-                        turnOff(address: plug.address)
+                    .onChange(of: plug.isOn) {
+                        if plug.isOn {
+                            turnOn(address: plug.address)
+                        }
+                        else {
+                            turnOff(address: plug.address)
+                        }
                     }
                 }
-//                .onChange(of: $plug.isOn) { oldValue, newValue in
-//                    if $plug.isOn {
-//                        turnOn(address: plug.address)
-//                    }
-//                    else {
-//                        turnOff(address: plug.address)
-//                    }
-//                }
             }
         }
     }
