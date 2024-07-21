@@ -18,6 +18,52 @@
             endingLineNumber = "17"
             landmarkName = "body"
             landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "65256A46-535C-4E61-BD8C-C26A87844363 - 6870796f7a063aff"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Toggle&lt;SwiftUI.Text&gt;, Swift.Optional&lt;&lt;&lt;opaque return type of SwiftUI.View.onChange&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Swift.Equatable&gt;(of: &#x3c4;_1_0, initial: Swift.Bool, _: () -&gt; ()) -&gt; some&gt;&gt;.0&gt;)&gt; in KasaMac.BatteryView.body.getter : some"
+                  moduleName = "KasaMac"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aaravnair/Documents/GitHub/KasaMac/KasaMac/Views/BatteryView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17">
+               </Location>
+               <Location
+                  uuid = "65256A46-535C-4E61-BD8C-C26A87844363 - 8b7eacd3f8b2c645"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.Text in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Toggle&lt;SwiftUI.Text&gt;, Swift.Optional&lt;&lt;&lt;opaque return type of SwiftUI.View.onChange&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Swift.Equatable&gt;(of: &#x3c4;_1_0, initial: Swift.Bool, _: () -&gt; ()) -&gt; some&gt;&gt;.0&gt;)&gt; in KasaMac.BatteryView.body.getter : some"
+                  moduleName = "KasaMac"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aaravnair/Documents/GitHub/KasaMac/KasaMac/Views/BatteryView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D2C009F8-EF58-4B35-A0E2-30E1AC379D99"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KasaMac/PythonRunner.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "getFile(name:)"
+            landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

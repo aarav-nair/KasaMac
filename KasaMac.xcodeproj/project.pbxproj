@@ -67,12 +67,10 @@
 			isa = PBXGroup;
 			children = (
 				5EE7E4312C43899400FC542B /* Views */,
-				5EE7E42F2C4388D700FC542B /* KasaViewModel.swift */,
 				5EE7E4282C39DBFF00FC542B /* PythonRunner.swift */,
-				5EE7E4242C39D9C700FC542B /* plug.py */,
-				5EE7E4262C39D9D200FC542B /* power.py */,
+				5EE7E42F2C4388D700FC542B /* KasaViewModel.swift */,
 				5EE7E4142C39D95600FC542B /* KasaMacApp.swift */,
-				5EE7E4232C39D9AA00FC542B /* Python Files */,
+				5EE7E4232C39D9AA00FC542B /* PythonFiles */,
 				5EE7E41A2C39D95700FC542B /* Preview Content */,
 				5EE7E4182C39D95700FC542B /* Assets.xcassets */,
 			);
@@ -88,11 +86,13 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		5EE7E4232C39D9AA00FC542B /* Python Files */ = {
+		5EE7E4232C39D9AA00FC542B /* PythonFiles */ = {
 			isa = PBXGroup;
 			children = (
+				5EE7E4262C39D9D200FC542B /* power.py */,
+				5EE7E4242C39D9C700FC542B /* plug.py */,
 			);
-			path = "Python Files";
+			path = PythonFiles;
 			sourceTree = "<group>";
 		};
 		5EE7E4312C43899400FC542B /* Views */ = {
