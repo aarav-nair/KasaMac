@@ -16,7 +16,7 @@ struct BatteryView: View {
         VStack {
             Toggle(isOn: $isShown, label: {
                 Text("Battery Optimizing")
-            })
+            }).keyboardShortcut("b")
             
             if isShown {
                 Picker(selection: $viewModel.currPlug) {

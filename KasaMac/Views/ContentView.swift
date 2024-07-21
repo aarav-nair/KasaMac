@@ -15,10 +15,10 @@ struct ContentView: View {
             if (!viewModel.discovered) {
                 Button {
                     viewModel.discoverPlugs()
-                    viewModel.discovered = true
+                    viewModel.discovered = viewModel.plugs.count != 0
                 } label: {
                     Text("Discover Plugs")
-                }
+                }.keyboardShortcut("d")
             }
                 
             else {
