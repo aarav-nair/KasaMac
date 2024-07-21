@@ -9,10 +9,13 @@ import Foundation
 import PythonKit
 
 func getFile(name: String) -> PythonObject {
+    let filePath = #file
+    let fileURL = URL(fileURLWithPath: filePath)
+    let directory = fileURL.deletingLastPathComponent().path()
+    
     let sys = Python.import("sys")
-    sys.path.append("/Users/aaravnair/Documents/GitHub/KasaMac/KasaMac")
-    sys.path.append("/Users/aaravnair/Documents/GitHub/KasaMac/KasaMac/proj_venv/lib/python3.12/site-packages")
-    print(sys.path)
+    sys.path.append(directory + "Python Files")
+    sys.path.append(directory + "proj_venv/lib/python3.12/site-packages")
 
     let file = Python.import(name)
     return file
