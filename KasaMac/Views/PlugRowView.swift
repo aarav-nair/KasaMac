@@ -15,7 +15,6 @@ struct PlugRowView: View {
         ScrollView {
             ForEach($viewModel.plugs, id: \.self) { $plug in
                 HStack {
-                    Image(systemName: "powerplug")
                     Toggle(isOn: $plug.isOn, label: {
                         Text(plug.name)
                     })
