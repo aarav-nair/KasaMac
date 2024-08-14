@@ -3,7 +3,7 @@ import sys
 from power import *
 import kasa
 from kasa import SmartPlug
-from kasa import Discover, Credentials
+from kasa import Discover
 
 
 async def all_plugs():
@@ -22,25 +22,32 @@ def findPlugs():
 
 
 def turn_on(address: str):
-    plug = Device.connect(str)
-    asyncio.run(plug.turn_off())
-
-
-def turn_off(address: str):
-    plug = Device.connect(str)
-    asyncio.run(plug.turn_off())
+    async def helper():
+        plug = await Discover.discover_single(str)
+        await plug.turn_on()
+    asyncio.run(helper())
     
+    
+def turn_off(address: str):
+    async def helper():
+        plug = await Discover.discover_single(str)
+        await plug.turn_off()
+    asyncio.run(helper())
+
 
 def auto(address: str, lower: int, upper: int):
     plug = SmartPlug(str)
     percent = currPercent()
     isCharge = isCharging()
+    
+    async def helper():
+        if isCharge and percent >= upper:
+          await plug.turn_off()
 
-    if isCharge and percent >= upper:
-      asyncio.run(plug.turn_off())
-
-    elif not isCharge and percent <= lower:
-      asyncio.run(plug.turn_on())
+        elif not isCharge and percent <= lower:
+          await plug.turn_on()
+    
+    asyncio.run(helper())
    
 
 if __name__ == "__main__":
